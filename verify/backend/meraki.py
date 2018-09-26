@@ -41,6 +41,8 @@ def verify() -> bool:
                 "Content-Type": "application/json"
             }
         )
+        if(r.status_code == 200):
+            print("[Connection to Meraki OK]")
     except:
         print("Unable to contact Meraki cloud")
         return False
